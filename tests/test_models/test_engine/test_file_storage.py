@@ -61,6 +61,6 @@ class TestFileStorage(unittest.TestCase):
         for key, value in new_dict.items():
             new_dict[key] = value.to_dict()
         string = json.dumps(new_dict)
-        with open("data.json", "r") as f:
+        with open("file.json", "r") as f:
             js = f.read()
         self.assertEqual(json.loads(string), json.loads(js))
